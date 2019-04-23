@@ -10,4 +10,4 @@ deploy:
     script: [ bash scripts/deploy.sh ]
     on:
       all_branches: true
-      condition: $TRAVIS_TAG =~ .*deploy-staging-probe.*
+      condition: $TRAVIS_TAG =~ ^v?[0-9]+\.[0-9]+\.[0-9]+-.*deploy-staging-probe.*
