@@ -1,4 +1,4 @@
-language: generic
+language: minimal
 deploy:
   # a tag containing deploy/staging-probe deploys probe to staging
   - provider: script
