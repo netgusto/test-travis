@@ -1,0 +1,8 @@
+deploy:
+  # a tag containing deploy/staging-probe deploys probe to staging
+  - provider: script
+    skip_cleanup: true
+    script: [ bash scripts/deploy.sh ]
+    on:
+      all_branches: true
+      condition: $TRAVIS_TAG =~ ^\d+\.\d+\.\d+-.*deploy/staging-probe.*
